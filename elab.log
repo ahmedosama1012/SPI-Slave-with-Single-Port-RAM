@@ -1,0 +1,67 @@
+Command: synth_design -rtl -top Master
+Starting synth_design
+Using part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3266.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Master' [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/Master.v:1]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:1]
+	Parameter IDLE bound to: 3'b000 
+	Parameter CHK_CMD bound to: 3'b001 
+	Parameter WRITE bound to: 3'b010 
+	Parameter READ_ADDRESS bound to: 3'b011 
+	Parameter READ_DATA bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "gray" *) [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:20]
+WARNING: [Synth 8-567] referenced signal 'rd_address_first' should be on the sensitivity list [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:22]
+WARNING: [Synth 8-567] referenced signal 'count_1' should be on the sensitivity list [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:22]
+WARNING: [Synth 8-567] referenced signal 'count_2' should be on the sensitivity list [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:22]
+WARNING: [Synth 8-567] referenced signal 'count_3' should be on the sensitivity list [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (1#1) [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/SPI.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM_pr2' [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/RAM_pr2.v:1]
+	Parameter MEM_DEPTH bound to: 256 - type: integer 
+	Parameter ADDR_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/RAM_pr2.v:21]
+WARNING: [Synth 8-5788] Register wr_address_reg in module RAM_pr2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/RAM_pr2.v:23]
+WARNING: [Synth 8-5788] Register mem_1_reg in module RAM_pr2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_1_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_1_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'RAM_pr2' (2#1) [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/RAM_pr2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Master' (3#1) [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/Master.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3266.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3266.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3266.547 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/basys_master.xdc]
+Finished Parsing XDC File [C:/Users/DELL/Desktop/Digital course/Projects/Project_2/essam/basys_master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3266.547 ; gain = 0.000
+12 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3266.547 ; gain = 0.000
